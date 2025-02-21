@@ -1,7 +1,7 @@
 import { useAtom } from 'jotai';
 import { atomWithStorage } from 'jotai/utils';
 
-const searchHistoryAtom = atomWithStorage('next-supabase-dashboard-search-history', {
+const searchHistoryAtom = atomWithStorage('next-supabase-dashboard-ui-search-history', {
   books: [],
   authors: [],
 });
