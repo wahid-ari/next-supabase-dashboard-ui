@@ -31,6 +31,7 @@ module.exports = {
         'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
       colors: {
+        // TODO Docs https://ui.shadcn.com/docs/components/sidebar#installation
         sidebar: {
           DEFAULT: 'var(--sidebar-background)',
           foreground: 'var(--sidebar-foreground)',

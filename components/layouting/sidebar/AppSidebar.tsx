@@ -123,7 +123,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
-      <SidebarContent className='scrollbar-thin scrollbar-track-neutral-100 scrollbar-thumb-neutral-200 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-700'>
+      {/* <SidebarContent className='scrollbar-thin scrollbar-track-neutral-100 scrollbar-thumb-neutral-200 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-700'> */}
+      <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
         {state == 'collapsed' ? (

@@ -16,11 +16,11 @@ export default function Started() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem className='hidden md:block'>
-              <BreadcrumbLink href='#'>Application</BreadcrumbLink>
+              <BreadcrumbLink href='/playground'>Application</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className='hidden md:block' />
             <BreadcrumbItem className='hidden sm:block'>
-              <BreadcrumbLink href='#'>Documentation</BreadcrumbLink>
+              <BreadcrumbLink href='/documentation'>Documentation</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className='hidden sm:block' />
             <BreadcrumbItem>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* https://ui.shadcn.com/docs/components/sidebar#installation */
+/* TODO Docs https://ui.shadcn.com/docs/components/sidebar#installation */
 @layer base {
   :root {
     --sidebar-background: #fafafa; /* neutral-50 */

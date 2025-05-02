@@ -16,7 +16,7 @@ export default function Documentation() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem className='hidden sm:block'>
-              <BreadcrumbLink href='#'>Application</BreadcrumbLink>
+              <BreadcrumbLink href='/playground'>Application</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className='hidden sm:block' />
             <BreadcrumbItem>
