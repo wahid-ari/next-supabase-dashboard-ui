@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/router';
 import { ChevronRight, type LucideIcon } from 'lucide-react';
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/Collapsible';
@@ -20,6 +21,7 @@ export function NavMain({
   items: {
     title: string;
     icon?: LucideIcon;
+    route?: string;
     isActive?: boolean;
     items?: {
       title: string;
@@ -27,12 +29,16 @@ export function NavMain({
     }[];
   }[];
 }) {
+  const router = useRouter();
+  function isOpenedRoute(route: string) {
+    return router.pathname.includes(route);
+  }
   return (
     <SidebarGroup>
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
-          <Collapsible key={item.title} asChild defaultOpen={item.isActive} className='group/collapsible'>
+          <Collapsible key={item.title} asChild defaultOpen={isOpenedRoute(item.route)} className='group/collapsible'>
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
                 <SidebarMenuButton tooltip={item.title}>

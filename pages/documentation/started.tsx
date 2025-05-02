@@ -9,18 +9,22 @@ import {
 
 import Layout from '@/components/layouting/Layout';
 
-export default function Dashboardd() {
+export default function Started() {
   return (
     <Layout
       breadcrumb={
         <Breadcrumb>
           <BreadcrumbList>
-            <BreadcrumbItem className='hidden sm:block'>
+            <BreadcrumbItem className='hidden md:block'>
               <BreadcrumbLink href='#'>Application</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator className='hidden md:block' />
+            <BreadcrumbItem className='hidden sm:block'>
+              <BreadcrumbLink href='#'>Documentation</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator className='hidden sm:block' />
             <BreadcrumbItem>
-              <BreadcrumbPage>Dashboardd</BreadcrumbPage>
+              <BreadcrumbPage>Started</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

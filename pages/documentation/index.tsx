@@ -9,7 +9,7 @@ import {
 
 import Layout from '@/components/layouting/Layout';
 
-export default function Dashboarddd() {
+export default function Documentation() {
   return (
     <Layout
       breadcrumb={
@@ -20,7 +20,7 @@ export default function Dashboarddd() {
             </BreadcrumbItem>
             <BreadcrumbSeparator className='hidden sm:block' />
             <BreadcrumbItem>
-              <BreadcrumbPage>Dashboarddd</BreadcrumbPage>
+              <BreadcrumbPage>Documentation</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>

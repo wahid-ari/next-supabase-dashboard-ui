@@ -52,16 +52,16 @@ const data = {
       plan: 'Free',
     },
   ],
-  // TODO open sidebar collapsible menu when link matched
   navMain: [
     {
       title: 'Playground',
       icon: Command,
+      route: '/playground',
       isActive: true,
       items: [
         {
           title: 'History',
-          url: '/dashboardd',
+          url: '/playground',
         },
         {
           title: 'Starred',
@@ -72,22 +72,22 @@ const data = {
     {
       title: 'Documentation',
       icon: BookOpen,
+      route: '/documentation',
       isActive: false,
       items: [
         {
           title: 'Introduction',
-          url: '/dashboarddd',
+          url: '/documentation',
         },
         {
-          title: 'Get Started',
-          url: '#',
+          title: 'Started',
+          url: '/documentation/started',
         },
       ],
     },
     {
       title: 'Settings',
       icon: Settings2,
-      isActive: false,
       items: [
         {
           title: 'General',
@@ -103,12 +103,12 @@ const data = {
   projects: [
     {
       name: 'Design Engineering',
-      url: '/dashboardd',
+      url: '/playground',
       icon: Frame,
     },
     {
       name: 'Sales & Marketing',
-      url: '#',
+      url: '/documentation/started',
       icon: PieChart,
     },
   ],
