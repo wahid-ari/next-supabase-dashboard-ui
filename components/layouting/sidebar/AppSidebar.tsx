@@ -7,7 +7,6 @@ import {
   Frame,
   GalleryVerticalEnd,
   LifeBuoyIcon,
-  Map,
   PieChart,
   SendIcon,
   Settings2,
@@ -123,8 +122,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
-      {/* <SidebarContent className='scrollbar-thin scrollbar-track-neutral-100 scrollbar-thumb-neutral-200 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-700'> */}
-      <SidebarContent>
+      <SidebarContent className='scrollbar-thin'>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
         {state == 'collapsed' ? (
@@ -141,14 +139,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarGroup className='mt-auto'>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild size='sm'>
-                  <a href='#'>
-                    <LifeBuoyIcon />
-                    <span>Support</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild size='sm'>
                   <a href='#'>

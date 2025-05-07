@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/router';
-import { ChevronRight, type LucideIcon } from 'lucide-react';
+import { ChevronRight, LifeBuoyIcon, type LucideIcon } from 'lucide-react';
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/Collapsible';
 import {
@@ -63,6 +63,14 @@ export function NavMain({
             </SidebarMenuItem>
           </Collapsible>
         ))}
+        <SidebarMenuItem>
+          <SidebarMenuButton asChild>
+            <a href='#'>
+              <LifeBuoyIcon />
+              <span>Support</span>
+            </a>
+          </SidebarMenuButton>
+        </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
   );
