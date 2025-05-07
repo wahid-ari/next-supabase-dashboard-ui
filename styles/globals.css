@@ -13,6 +13,7 @@
     --sidebar-accent-foreground: #171717; /* zinc-900 */
     --sidebar-border: #d1d5db; /* gray-300 */
     --sidebar-ring: #0ea5e9; /* sky-500 */
+    --scrollbar-thumb: #d4d4d4; /* neutral-300 */
   }
 
   .dark {
@@ -24,6 +25,25 @@
     --sidebar-accent-foreground: #f4f4f5; /* zinc-100 */
     --sidebar-border: #3f3f46; /* zinc-700 */
     --sidebar-ring: #0ea5e9; /* sky-500 */
+    --scrollbar-thumb: #404040; /* neutral-700 */
+  }
+}
+
+@layer base {
+  /* Custom scrollbar styling. Thanks @pranathiperii. */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+  }
+  * {
+    /* scrollbar-width: thin; this will make all scrollbar thin, use scrollbar-thin css class from tailwind-scrollbar instead */
+    scrollbar-color: var(--scrollbar-thumb) transparent;
   }
 }
 
@@ -56,6 +76,7 @@ body {
   height: 4px !important;
 }
 
+/* Banner login Register page */
 .banner {
   background: linear-gradient(
       145deg,
