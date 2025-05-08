@@ -171,7 +171,7 @@ export function DemoChat() {
                       <p className='text-sm font-medium leading-none'>{user.name}</p>
                       <p className='text-sm text-neutral-400 dark:text-neutral-500'>{user.email}</p>
                     </div>
-                    {selectedUsers.includes(user) ? <Check className='text-primary ml-auto flex h-5 w-5' /> : null}
+                    {selectedUsers.includes(user) ? <Check className='ml-auto flex h-5 w-5 text-primary' /> : null}
                   </CommandItem>
                 ))}
               </CommandGroup>
@@ -181,7 +181,7 @@ export function DemoChat() {
             {selectedUsers.length > 0 ? (
               <div className='mt-2 flex -space-x-2 overflow-hidden sm:mt-0'>
                 {selectedUsers.map((user) => (
-                  <Avatar key={user.email} className='border-background inline-block border-2'>
+                  <Avatar key={user.email} className='inline-block border-2 border-background'>
                     <AvatarImage src={user.avatar} />
                     <AvatarFallback>{user.name[0]}</AvatarFallback>
                   </Avatar>

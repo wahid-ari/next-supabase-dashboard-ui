@@ -76,7 +76,7 @@ export function DemoActivityGoal() {
           </Button>
           <div className='flex-1 text-center'>
             <div className='text-5xl font-bold tracking-tighter'>{goal}</div>
-            <div className='text-muted-foreground text-[0.70rem] uppercase'>Calories/day</div>
+            <div className='text-[0.70rem] uppercase text-muted-foreground'>Calories/day</div>
           </div>
           <Button
             variant='outline'

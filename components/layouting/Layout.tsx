@@ -14,7 +14,7 @@ export default function Layout({ children, breadcrumb }: { children: ReactNode; 
       <SidebarInset>
         <header
           className={cn(
-            'sticky z-10 top-0 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12',
+            'sticky top-0 z-10 flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12',
             'border-b border-b-neutral-200 bg-neutral-50 dark:border-b-neutral-800 dark:bg-neutral-900',
           )}
         >
