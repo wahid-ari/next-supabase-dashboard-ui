@@ -1025,7 +1025,10 @@ export default function Ui() {
               tickMargin={8}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='dot' className='dark:border-neutral-700' />} />
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent indicator='dot' className='dark:border-neutral-700' />}
+            />
             <Area
               dataKey='mobile'
               type='natural'
