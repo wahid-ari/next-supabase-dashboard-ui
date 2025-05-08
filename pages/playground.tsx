@@ -7,6 +7,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/Breadcrumb';
 
+import SectionCard from '@/components/layouting/components/SectionCards';
 import Layout from '@/components/layouting/Layout';
 
 export default function Playground() {
@@ -27,6 +28,7 @@ export default function Playground() {
       }
     >
       <div className='p-4'>
+        <SectionCard />
         <div className='grid gap-4 md:grid-cols-3'>
           <div className='aspect-video rounded-xl bg-neutral-50 dark:bg-neutral-900' />
           <div className='aspect-video rounded-xl bg-neutral-50 dark:bg-neutral-900' />
