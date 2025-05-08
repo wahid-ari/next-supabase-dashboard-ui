@@ -69,7 +69,6 @@ module.exports = {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
         },
-        // TODO Docs https://ui.shadcn.com/docs/components/sidebar#installation
         sidebar: {
           DEFAULT: 'var(--sidebar-background)',
           foreground: 'var(--sidebar-foreground)',
