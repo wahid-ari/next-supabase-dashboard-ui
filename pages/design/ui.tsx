@@ -38,6 +38,7 @@ import {
   Users,
 } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
 import { toast as toastsonner } from 'sonner';
 
 import { cn } from '@/libs/utils';
@@ -73,6 +74,7 @@ import { Button } from '@/components/ui/Button';
 import { Calendar } from '@/components/ui/Calendar';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/Carousel';
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/Chart';
 import { Checkbox } from '@/components/ui/Checkbox';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/Collapsible';
 import {
@@ -338,6 +340,33 @@ export default function Ui() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
+  const chartData = [
+    { month: 'January', desktop: 186, mobile: 80 },
+    { month: 'February', desktop: 305, mobile: 200 },
+    { month: 'March', desktop: 237, mobile: 120 },
+    { month: 'April', desktop: 73, mobile: 190 },
+    { month: 'May', desktop: 209, mobile: 130 },
+    { month: 'June', desktop: 214, mobile: 140 },
+  ];
+  const chartConfig = {
+    // desktop: {
+    //   label: 'Desktop',
+    //   color: 'hsl(var(--chart-1))',
+    // },
+    // mobile: {
+    //   label: 'Mobile',
+    //   color: 'hsl(var(--chart-2))',
+    // },
+    desktop: {
+      label: 'Desktop',
+      color: '#2563eb',
+    },
+    mobile: {
+      label: 'Mobile',
+      color: '#60a5fa',
+    },
+  } satisfies ChartConfig;
+
   return (
     <Layout title='UI - MyBook' description='Example UI - MyBook'>
       <div className='relative'>
@@ -403,6 +432,11 @@ export default function Ui() {
           <span className='mb-3 block underline'>
             <Link className={tocClass} href='#carousel'>
               Carousel
+            </Link>
+          </span>
+          <span className='mb-3 block underline'>
+            <Link className={tocClass} href='#chart'>
+              Chart
             </Link>
           </span>
           <span className='mb-3 block underline'>
@@ -971,6 +1005,45 @@ export default function Ui() {
             <CarouselNext />
           </Carousel>
         </div>
+      </Wrapper>
+
+      <Wrapper id='chart' name='Chart' docs='https://ui.shadcn.com/docs/components/chart'>
+        <ChartContainer config={chartConfig}>
+          <AreaChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey='month'
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='dot' />} />
+            <Area
+              dataKey='mobile'
+              type='natural'
+              fill='var(--color-mobile)'
+              fillOpacity={0.4}
+              stroke='var(--color-mobile)'
+              stackId='a'
+            />
+            <Area
+              dataKey='desktop'
+              type='natural'
+              fill='var(--color-desktop)'
+              fillOpacity={0.4}
+              stroke='var(--color-desktop)'
+              stackId='a'
+            />
+          </AreaChart>
+        </ChartContainer>
       </Wrapper>
 
       <Wrapper
